@@ -19,11 +19,15 @@ def write_md(dict_list, filepath="README.md"):
     Parameters
     ----------
     dict_list : list
-        Each element is an dictionary of
-        {"name": "Tensorflow",
-         "url": "https://github.com/tensorflow/tensorflow",
-         "stars": 55359,
-         "description": "Computation using data flow graph ..."}
+
+        [row1, row2, ...]
+
+        where row1 = {
+            "name": "Tensorflow",
+            "url": "https://github.com/tensorflow/tensorflow",
+            "stars": 55359,
+            "description": "Computation using data flow graph ..."
+        }
 
     filepath : str
         Readme path
@@ -34,38 +38,37 @@ def write_md(dict_list, filepath="README.md"):
         Returns True If everything went smooth
     """
 
-    HEAD = """# Top Deep Learning Projects
+    HEAD = (
+        "# Top Deep Learning Projects",
+        "A list of popular github projects related to deep learning (ranked by stars automatically).\n",
 
-A list of popular github projects related to deep learning (ranked by stars automatically).
+        "Please update list.txt (via pull requests)\n",
 
+        "|Project Name| Stars | Description |",
+        "| ---------- |:-----:| ----------- |\n",
+    )
 
-Please update list.txt (via pull requests)
+    TAIL = (
+        f"\n\nLast Automatic Update: {time.strftime('%c')}\n",
 
-
-|Project Name| Stars | Description |
-| ---------- |:-----:| ----------- |
-"""
-
-    TAIL = f"""
-
-Last Automatic Update: {time.strftime("%c")}
-
-Inspired by https://github.com/aymericdamien/TopDeepLearning
-"""
+        "Inspired by https://github.com/aymericdamien/TopDeepLearning",
+    )
 
     # sort descending by n_stars
     dict_list = sorted(dict_list, key=lambda x: x['stars'], reverse=True)
 
     # each data is a string (see `dict2md`)
-    data_list = list(map(dict2md, dict_list))
+    data_list = map(dict2md, dict_list)
 
     with open(filepath, 'w') as out:
 
-        out.write(HEAD)
+        out.write("\n".join(HEAD))
         out.write("\n".join(data_list))
-        out.write(TAIL)
+        out.write("\n".join(TAIL))
 
         return True
+
+    return False
 
 
 def dict2md(dict_):
@@ -78,12 +81,14 @@ def get_url_list(filepath="list.txt"):
 
     def preprocess_url(url):
         """Returns an API url"""
-        return "https://api.github.com/repos/" + url[19:].strip().strip("/")
+        return "https://api.github.com/repos/{}".format(
+            url[19:].strip().strip("/")
+        )
 
     with open(filepath, 'r') as f:
         data = f.readlines()
 
-    return list(map(preprocess_url, data))
+    return map(preprocess_url, data)
 
 
 def grab_data(url):
@@ -110,6 +115,7 @@ def grab_data(url):
     }
 
     try:
+        print(f"Accessing to {url}")
         data_dict = requests.get(url, params=params).json()
 
         return {'name': data_dict['name'],
