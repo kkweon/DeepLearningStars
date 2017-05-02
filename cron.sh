@@ -1,5 +1,7 @@
 #!/bin/sh
-git pull
-python3 list2md.py
-git commit -m"Auto update" -a
-git push origin
+git pull origin master
+python3 list2md.multiprocess.py
+git commit -m "Auto update" -a
+git push origin master
+$GMAIL_ID
+$GMAIL_PW
