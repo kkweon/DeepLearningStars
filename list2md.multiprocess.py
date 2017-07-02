@@ -59,9 +59,9 @@ def write_md(dict_list, filepath="README.md"):
 
     with open(filepath, 'w') as out:
 
-        out.write("\n".join(head))
+        out.write(head)
         out.write("\n".join(data_list))
-        out.write("\n".join(tail))
+        out.write(tail)
 
         return True
 
