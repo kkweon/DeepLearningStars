@@ -5,8 +5,9 @@ Please update list.txt (via pull requests)
 |Project Name| Stars | Description |
 | ---------- |:-----:| ----------- |
 | [tensorflow](https://github.com/tensorflow/tensorflow) | 62276 | Computation using data flow graphs for scalable machine learning |
+| [scikit-learn](https://github.com/scikit-learn/scikit-learn) | 19545 | scikit-learn: machine learning in Python |
 | [caffe](https://github.com/BVLC/caffe) | 18794 | Caffe: a fast open framework for deep learning. |
-| [keras](https://github.com/fchollet/keras) | 17112 | Deep Learning library for Python. Runs on TensorFlow, Theano, or CNTK. |
+| [keras](https://github.com/fchollet/keras) | 17113 | Deep Learning library for Python. Runs on TensorFlow, Theano, or CNTK. |
 | [neural-style](https://github.com/jcjohnson/neural-style) | 14055 | Torch implementation of neural style algorithm |
 | [CNTK](https://github.com/Microsoft/CNTK) | 11605 | Microsoft Cognitive Toolkit (CNTK), an open source deep-learning toolkit |
 | [deepdream](https://github.com/google/deepdream) | 10320 | None |
@@ -45,5 +46,5 @@ Please update list.txt (via pull requests)
 | [DeepLearningStars](https://github.com/hunkim/DeepLearningStars) | 173 | Top Deep Learning Projects based on their Stars! |
 | [dlami](https://github.com/ritchieng/dlami) | 146 | A Deep Learning Amazon Web Service (AWS) AMI that is open, free and works. Run in less than 5 minutes. TensorFlow, Keras, PyTorch, Theano, MXNet, CNTK, Caffe and all dependencies. |
 
-Last Automatic Update: Sun Jul  2 00:28:19 2017
+Last Automatic Update: Sun Jul  2 00:38:41 2017
 Inspired by https://github.com/aymericdamien/TopDeepLearning
