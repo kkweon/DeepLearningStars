@@ -7,10 +7,10 @@ Examples
     $ python list2md.multiprocess.py
 
 """
-import requests
 import time
-import config
 from multiprocessing.pool import Pool
+import config
+import requests
 
 
 def write_md(dict_list, filepath="README.md"):
@@ -38,20 +38,17 @@ def write_md(dict_list, filepath="README.md"):
         Returns True If everything went smooth
     """
 
-    HEAD = (
-        "# Top Deep Learning Projects",
-        "A list of popular github projects related to deep learning (ranked by stars automatically).\n",
-
-        "Please update list.txt (via pull requests)\n",
-
-        "|Project Name| Stars | Description |",
-        "| ---------- |:-----:| ----------- |\n",
+    head = (
+        "# Top Deep Learning Projects"
+        "A list of popular github projects related to deep learning (ranked by stars automatically).\n"
+        "Please update list.txt (via pull requests)\n"
+        "|Project Name| Stars | Description |\n"
+        "| ---------- |:-----:| ----------- |\n"
     )
 
-    TAIL = (
-        f"\n\nLast Automatic Update: {time.strftime('%c')}\n",
-
-        "Inspired by https://github.com/aymericdamien/TopDeepLearning",
+    tail = (
+        f"\n\nLast Automatic Update: {time.strftime('%c')}\n"
+        "Inspired by https://github.com/aymericdamien/TopDeepLearning"
     )
 
     # sort descending by n_stars
@@ -62,9 +59,9 @@ def write_md(dict_list, filepath="README.md"):
 
     with open(filepath, 'w') as out:
 
-        out.write("\n".join(HEAD))
+        out.write("\n".join(head))
         out.write("\n".join(data_list))
-        out.write("\n".join(TAIL))
+        out.write("\n".join(tail))
 
         return True
 
@@ -85,8 +82,8 @@ def get_url_list(filepath="list.txt"):
             url[19:].strip().strip("/")
         )
 
-    with open(filepath, 'r') as f:
-        data = f.readlines()
+    with open(filepath, 'r') as file:
+        data = file.readlines()
 
     return map(preprocess_url, data)
 
@@ -131,6 +128,7 @@ def grab_data(url):
 
 
 def main():
+    """Main function"""
     url_list = get_url_list()
 
     pool = Pool(processes=config.N_WORKERS)
