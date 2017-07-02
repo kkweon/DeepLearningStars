@@ -39,9 +39,9 @@ def write_md(dict_list, filepath="README.md"):
     """
 
     head = (
-        "# Top Deep Learning Projects"
+        "# Top Deep Learning Projects\n"
         "A list of popular github projects related to deep learning (ranked by stars automatically).\n"
-        "Please update list.txt (via pull requests)\n"
+        "Please update list.txt (via pull requests)\n\n"
         "|Project Name| Stars | Description |\n"
         "| ---------- |:-----:| ----------- |\n"
     )
