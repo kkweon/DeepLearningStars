@@ -7,10 +7,10 @@ Examples
     $ python list2md.multiprocess.py
 
 """
-import requests
 import time
-import config
 from multiprocessing.pool import Pool
+import config
+import requests
 
 
 def write_md(dict_list, filepath="README.md"):
@@ -19,11 +19,15 @@ def write_md(dict_list, filepath="README.md"):
     Parameters
     ----------
     dict_list : list
-        Each element is an dictionary of
-        {"name": "Tensorflow",
-         "url": "https://github.com/tensorflow/tensorflow",
-         "stars": 55359,
-         "description": "Computation using data flow graph ..."}
+
+        [row1, row2, ...]
+
+        where row1 = {
+            "name": "Tensorflow",
+            "url": "https://github.com/tensorflow/tensorflow",
+            "stars": 55359,
+            "description": "Computation using data flow graph ..."
+        }
 
     filepath : str
         Readme path
@@ -34,38 +38,34 @@ def write_md(dict_list, filepath="README.md"):
         Returns True If everything went smooth
     """
 
-    HEAD = """# Top Deep Learning Projects
+    head = (
+        "# Top Deep Learning Projects\n"
+        "A list of popular github projects related to deep learning (ranked by stars automatically).\n"
+        "Please update list.txt (via pull requests)\n\n"
+        "|Project Name| Stars | Description |\n"
+        "| ---------- |:-----:| ----------- |\n"
+    )
 
-A list of popular github projects related to deep learning (ranked by stars automatically).
-
-
-Please update list.txt (via pull requests)
-
-
-|Project Name| Stars | Description |
-| ---------- |:-----:| ----------- |
-"""
-
-    TAIL = f"""
-
-Last Automatic Update: {time.strftime("%c")}
-
-Inspired by https://github.com/aymericdamien/TopDeepLearning
-"""
+    tail = (
+        f"\n\nLast Automatic Update: {time.strftime('%c')}\n"
+        "Inspired by https://github.com/aymericdamien/TopDeepLearning"
+    )
 
     # sort descending by n_stars
     dict_list = sorted(dict_list, key=lambda x: x['stars'], reverse=True)
 
     # each data is a string (see `dict2md`)
-    data_list = list(map(dict2md, dict_list))
+    data_list = map(dict2md, dict_list)
 
     with open(filepath, 'w') as out:
 
-        out.write(HEAD)
+        out.write(head)
         out.write("\n".join(data_list))
-        out.write(TAIL)
+        out.write(tail)
 
         return True
+
+    return False
 
 
 def dict2md(dict_):
@@ -78,12 +78,14 @@ def get_url_list(filepath="list.txt"):
 
     def preprocess_url(url):
         """Returns an API url"""
-        return "https://api.github.com/repos/" + url[19:].strip().strip("/")
+        return "https://api.github.com/repos/{}".format(
+            url[19:].strip().strip("/")
+        )
 
-    with open(filepath, 'r') as f:
-        data = f.readlines()
+    with open(filepath, 'r') as file:
+        data = file.readlines()
 
-    return list(map(preprocess_url, data))
+    return map(preprocess_url, data)
 
 
 def grab_data(url):
@@ -110,6 +112,7 @@ def grab_data(url):
     }
 
     try:
+        print(f"Accessing to {url}")
         data_dict = requests.get(url, params=params).json()
 
         return {'name': data_dict['name'],
@@ -125,6 +128,7 @@ def grab_data(url):
 
 
 def main():
+    """Main function"""
     url_list = get_url_list()
 
     pool = Pool(processes=config.N_WORKERS)
