@@ -39,3 +39,5 @@ https://github.com/floydhub/dl-docker
 https://github.com/deeplearning4j/deeplearning4j
 https://github.com/Swift-AI/Swift-AI
 https://github.com/scikit-learn/scikit-learn
+https://github.com/PAIR-code/deeplearnjs
+https://github.com/transcranial/keras-js

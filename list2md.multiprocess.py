@@ -1,5 +1,7 @@
+# pylint: disable=C0103
 """
 Multiprocess version of list2md.py
+
 
 Examples
 ----------
@@ -9,16 +11,30 @@ Examples
 """
 import time
 from multiprocessing.pool import Pool
-import config
+from typing import List, Iterator
+from mypy_extensions import TypedDict
+
 import requests
 
+import config
 
-def write_md(dict_list, filepath="README.md"):
+GitType = TypedDict("GitType", {
+    "name": str,
+    "url": str,
+    "stars": int,
+    "description": str,
+    'created': str,
+    'updated': str,
+    'forks': str
+})
+
+
+def write_md(dict_list: List[GitType], filepath: str = "README.md") -> bool:
     """Given a list of dict, write a markdown file
 
     Parameters
     ----------
-    dict_list : list
+    dict_list : List[GitType]
 
         [row1, row2, ...]
 
@@ -40,16 +56,12 @@ def write_md(dict_list, filepath="README.md"):
 
     head = (
         "# Top Deep Learning Projects\n"
-        "A list of popular github projects related to deep learning (ranked by stars automatically).\n"
+        "A list of popular github projects ordered by stars.\n"
         "Please update list.txt (via pull requests)\n\n"
         "|Project Name| Stars | Description |\n"
-        "| ---------- |:-----:| ----------- |\n"
-    )
+        "| ---------- |:-----:| ----------- |\n")
 
-    tail = (
-        f"\n\nLast Automatic Update: {time.strftime('%c')}\n"
-        "Inspired by https://github.com/aymericdamien/TopDeepLearning"
-    )
+    tail = "\n\nLast Automatic Update: {}\n".format(time.strftime('%c'))
 
     # sort descending by n_stars
     dict_list = sorted(dict_list, key=lambda x: x['stars'], reverse=True)
@@ -68,19 +80,18 @@ def write_md(dict_list, filepath="README.md"):
     return False
 
 
-def dict2md(dict_):
+def dict2md(dict_: GitType) -> str:
     """Convert a dictionary to a markdown format"""
     return "| [{name}]({url}) | {stars} | {description} |".format(**dict_)
 
 
-def get_url_list(filepath="list.txt"):
+def get_url_list(filepath: str = "list.txt") -> Iterator[str]:
     """Read list.txt and returns a list of API urls"""
 
-    def preprocess_url(url):
+    def preprocess_url(url: str) -> str:
         """Returns an API url"""
         return "https://api.github.com/repos/{}".format(
-            url[19:].strip().strip("/")
-        )
+            url[19:].strip().strip("/"))
 
     with open(filepath, 'r') as file:
         data = file.readlines()
@@ -88,7 +99,7 @@ def get_url_list(filepath="list.txt"):
     return map(preprocess_url, data)
 
 
-def grab_data(url):
+def grab_data(url: str) -> GitType:
     """Go to the URL and grab a data
 
     Parameters
@@ -107,27 +118,27 @@ def grab_data(url):
                    'url',
                    'stars'])
     """
-    params = {
-        "access_token": config.ACCESS_TOKEN
-    }
+    params = {"access_token": config.ACCESS_TOKEN}
 
     try:
-        print(f"Accessing to {url}")
+        print("Accessing to {}".format(url))
         data_dict = requests.get(url, params=params).json()
 
-        return {'name': data_dict['name'],
-                'description': data_dict['description'],
-                'forks': data_dict['forks_count'],
-                'created': data_dict['created_at'],
-                'updated': data_dict['updated_at'],
-                'url': data_dict['html_url'],
-                'stars': data_dict['stargazers_count']}
+        return {
+            'name': data_dict['name'],
+            'description': data_dict['description'],
+            'forks': data_dict['forks_count'],
+            'created': data_dict['created_at'],
+            'updated': data_dict['updated_at'],
+            'url': data_dict['html_url'],
+            'stars': data_dict['stargazers_count']
+        }
 
     except KeyError:
-        raise Exception(f"{data_dict}")
+        raise Exception("{}".format(data_dict))
 
 
-def main():
+def main() -> None:
     """Main function"""
     url_list = get_url_list()
 

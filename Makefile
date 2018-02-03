@@ -24,7 +24,7 @@ help: ##@other Show this help.
 
 push: ## push to github
 	git add -A
-	git commit -m "auto commit"
+	git commit -m "auto commit" --amend
 	git push origin master --force
 
 list: ## crawl a list
