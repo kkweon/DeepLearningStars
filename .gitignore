@@ -128,3 +128,4 @@ $RECYCLE.BIN/
 
 # KDE directory preferences
 .directory
+.mypy_cache/
