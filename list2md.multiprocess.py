@@ -9,24 +9,32 @@ Examples
     $ python list2md.multiprocess.py
 
 """
+import argparse
 import time
 from multiprocessing.pool import Pool
-from typing import List, Iterator
-from mypy_extensions import TypedDict
+from typing import Iterator, List
 
 import requests
+from mypy_extensions import TypedDict
 
-import config
+parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+parser.add_argument("--token", help="GitHub API Token to query repo stars.")
+parser.add_argument("--workers", help="The number of workers to fetch GitHub stars.")
+args = parser.parse_args()
 
-GitType = TypedDict("GitType", {
-    "name": str,
-    "url": str,
-    "stars": int,
-    "description": str,
-    'created': str,
-    'updated': str,
-    'forks': str
-})
+
+GitType = TypedDict(
+    "GitType",
+    {
+        "name": str,
+        "url": str,
+        "stars": int,
+        "description": str,
+        "created": str,
+        "updated": str,
+        "forks": str,
+    },
+)
 
 
 def write_md(dict_list: List[GitType], filepath: str = "README.md") -> bool:
@@ -59,17 +67,18 @@ def write_md(dict_list: List[GitType], filepath: str = "README.md") -> bool:
         "A list of popular github projects ordered by stars.\n"
         "Please update list.txt (via pull requests)\n\n"
         "|Project Name| Stars | Description |\n"
-        "| ---------- |:-----:| ----------- |\n")
+        "| ---------- |:-----:| ----------- |\n"
+    )
 
-    tail = "\n\nLast Automatic Update: {}\n".format(time.strftime('%c'))
+    tail = "\n\nLast Automatic Update: {}\n".format(time.strftime("%c"))
 
     # sort descending by n_stars
-    dict_list = sorted(dict_list, key=lambda x: x['stars'], reverse=True)
+    dict_list = sorted(dict_list, key=lambda x: x["stars"], reverse=True)
 
     # each data is a string (see `dict2md`)
     data_list = map(dict2md, dict_list)
 
-    with open(filepath, 'w') as out:
+    with open(filepath, "w") as out:
 
         out.write(head)
         out.write("\n".join(data_list))
@@ -90,10 +99,9 @@ def get_url_list(filepath: str = "list.txt") -> Iterator[str]:
 
     def preprocess_url(url: str) -> str:
         """Returns an API url"""
-        return "https://api.github.com/repos/{}".format(
-            url[19:].strip().strip("/"))
+        return "https://api.github.com/repos/{}".format(url[19:].strip().strip("/"))
 
-    with open(filepath, 'r') as file:
+    with open(filepath, "r") as file:
         data = file.readlines()
 
     return map(preprocess_url, data)
@@ -118,20 +126,20 @@ def grab_data(url: str) -> GitType:
                    'url',
                    'stars'])
     """
-    params = {"access_token": config.ACCESS_TOKEN}
+    params = {"access_token": args.token}
 
     try:
         print("Accessing to {}".format(url))
         data_dict = requests.get(url, params=params).json()
 
         return {
-            'name': data_dict['name'],
-            'description': data_dict['description'],
-            'forks': data_dict['forks_count'],
-            'created': data_dict['created_at'],
-            'updated': data_dict['updated_at'],
-            'url': data_dict['html_url'],
-            'stars': data_dict['stargazers_count']
+            "name": data_dict["name"],
+            "description": data_dict["description"],
+            "forks": data_dict["forks_count"],
+            "created": data_dict["created_at"],
+            "updated": data_dict["updated_at"],
+            "url": data_dict["html_url"],
+            "stars": data_dict["stargazers_count"],
         }
 
     except KeyError:
@@ -142,11 +150,11 @@ def main() -> None:
     """Main function"""
     url_list = get_url_list()
 
-    pool = Pool(processes=config.N_WORKERS)
+    pool = Pool(processes=args.workers)
     result = pool.map_async(grab_data, url_list)
 
     write_md(result.get())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
