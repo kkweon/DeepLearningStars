@@ -6,7 +6,7 @@ name: cron
 # events but only for the master branch
 on:
   schedule:
-    - cron: "41 * * * *"
+    - cron: "0 */1 * * *"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -24,7 +24,7 @@ jobs:
       uses: dschep/install-pipenv-action@v1
     # Runs a single command using the runners shell
     - name: Run a one-line script
-      run: pipenv run python list2md.multiprocess.py --token ${{ secrets.token }}
+      run: pipenv install && pipenv run python list2md.multiprocess.py --token ${{ secrets.token }}
     - name: GitHub Push
       uses: ad-m/github-push-action@v0.5.0
       with:
