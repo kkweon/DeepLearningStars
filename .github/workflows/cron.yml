@@ -26,12 +26,9 @@ jobs:
     - name: Run list2md.multiprocess.py
       run: pipenv install && pipenv run python list2md.multiprocess.py --token ${{ secrets.token }}
     - name: Add & Commit
-      uses: EndBug/add-and-commit@v4.0.0
-      with:
-        author_name: GitHub Action
-        author_email: kkweon@gmail.com
-    - name: GitHub Push
-      uses: ad-m/github-push-action@v0.5.0
-      with:
-        # Token for the repo. Can be passed in using $\{{ secrets.GITHUB_TOKEN }}
-        github_token: ${{ secrets.token }}
+      run: |
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'kkweon@gmail.com'
+        git commit -am "GitHub Cron Workflow Commit"
+        git push
+
