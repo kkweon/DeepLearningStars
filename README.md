@@ -4,11 +4,11 @@ Please update list.txt (via pull requests)
 
 |Project Name| Stars | Description |
 | ---------- |:-----:| ----------- |
-| [tensorflow](https://github.com/tensorflow/tensorflow) | 141738 | An Open Source Machine Learning Framework for Everyone |
+| [tensorflow](https://github.com/tensorflow/tensorflow) | 141739 | An Open Source Machine Learning Framework for Everyone |
 | [keras](https://github.com/keras-team/keras) | 47108 | Deep Learning for humans |
 | [scikit-learn](https://github.com/scikit-learn/scikit-learn) | 39648 | scikit-learn: machine learning in Python |
 | [pytorch](https://github.com/pytorch/pytorch) | 36648 | Tensors and Dynamic neural networks in Python with strong GPU acceleration |
-| [caffe](https://github.com/BVLC/caffe) | 29953 | Caffe: a fast open framework for deep learning. |
+| [caffe](https://github.com/BVLC/caffe) | 29954 | Caffe: a fast open framework for deep learning. |
 | [gym](https://github.com/openai/gym) | 19890 | A toolkit for developing and comparing reinforcement learning algorithms. |
 | [incubator-mxnet](https://github.com/apache/incubator-mxnet) | 18437 | Lightweight, Portable, Flexible Distributed/Mobile Deep Learning with Dynamic, Mutation-aware Dataflow Dep Scheduler; for Python, R, Julia, Scala, Go, Javascript and more |
 | [data-science-ipython-notebooks](https://github.com/donnemartin/data-science-ipython-notebooks) | 18098 | Data science Python notebooks: Deep learning (TensorFlow, Theano, Caffe, Keras), scikit-learn, Kaggle, big data (Spark, Hadoop MapReduce, HDFS), matplotlib, pandas, NumPy, SciPy, Python essentials, AWS, and various command lines. |
@@ -48,4 +48,4 @@ Please update list.txt (via pull requests)
 | [dlami](https://github.com/ritchieng/dlami) | 235 | A Deep Learning Amazon Web Service (AWS) AMI that is open, free and works. Run in less than 5 minutes. TensorFlow, Keras, PyTorch, Theano, MXNet, CNTK, Caffe and all dependencies. |
 | [PaintsChainer](https://github.com/taizan/PaintsChainer) | 85 | line drawing colorization using chainer |
 
-Last Automatic Update: Sun Mar  8 05:19:48 2020 (UTC)
+Last Automatic Update: Sun Mar  8 06:05:32 2020 (UTC)
