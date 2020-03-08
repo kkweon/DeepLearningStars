@@ -70,7 +70,7 @@ def write_md(dict_list: List[GitType], filepath: str = "README.md") -> bool:
         "| ---------- |:-----:| ----------- |\n"
     )
 
-    tail = "\n\nLast Automatic Update: {}\n".format(time.strftime("%c"))
+    tail = "\n\nLast Automatic Update: {}\n".format(time.strftime("%c (%Z)"))
 
     # sort descending by n_stars
     dict_list = sorted(dict_list, key=lambda x: x["stars"], reverse=True)
