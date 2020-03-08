@@ -23,9 +23,9 @@ jobs:
       uses: dschep/install-pipenv-action@v1
     # Runs a single command using the runners shell
     - name: Run a one-line script
-      run: pipenv run python list2md.multiprocess.py --token ${{ secretes.GITHUB_TOKEN }}
+      run: pipenv run python list2md.multiprocess.py --token ${{ secretes.token }}
     - name: GitHub Push
       uses: ad-m/github-push-action@v0.5.0
       with:
         # Token for the repo. Can be passed in using $\{{ secrets.GITHUB_TOKEN }}
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.token }}
