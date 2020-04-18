@@ -4,40 +4,40 @@ Please update list.txt (via pull requests)
 
 |Project Name| Stars | Description |
 | ---------- |:-----:| ----------- |
-| [tensorflow](https://github.com/tensorflow/tensorflow) | 143267 | An Open Source Machine Learning Framework for Everyone |
-| [keras](https://github.com/keras-team/keras) | 47770 | Deep Learning for humans |
-| [scikit-learn](https://github.com/scikit-learn/scikit-learn) | 40214 | scikit-learn: machine learning in Python |
-| [pytorch](https://github.com/pytorch/pytorch) | 37779 | Tensors and Dynamic neural networks in Python with strong GPU acceleration |
-| [caffe](https://github.com/BVLC/caffe) | 30114 | Caffe: a fast open framework for deep learning. |
-| [gym](https://github.com/openai/gym) | 20326 | A toolkit for developing and comparing reinforcement learning algorithms. |
-| [incubator-mxnet](https://github.com/apache/incubator-mxnet) | 18573 | Lightweight, Portable, Flexible Distributed/Mobile Deep Learning with Dynamic, Mutation-aware Dataflow Dep Scheduler; for Python, R, Julia, Scala, Go, Javascript and more |
-| [data-science-ipython-notebooks](https://github.com/donnemartin/data-science-ipython-notebooks) | 18292 | Data science Python notebooks: Deep learning (TensorFlow, Theano, Caffe, Keras), scikit-learn, Kaggle, big data (Spark, Hadoop MapReduce, HDFS), matplotlib, pandas, NumPy, SciPy, Python essentials, AWS, and various command lines. |
+| [tensorflow](https://github.com/tensorflow/tensorflow) | 143306 | An Open Source Machine Learning Framework for Everyone |
+| [keras](https://github.com/keras-team/keras) | 47783 | Deep Learning for humans |
+| [scikit-learn](https://github.com/scikit-learn/scikit-learn) | 40227 | scikit-learn: machine learning in Python |
+| [pytorch](https://github.com/pytorch/pytorch) | 37810 | Tensors and Dynamic neural networks in Python with strong GPU acceleration |
+| [caffe](https://github.com/BVLC/caffe) | 30119 | Caffe: a fast open framework for deep learning. |
+| [gym](https://github.com/openai/gym) | 20340 | A toolkit for developing and comparing reinforcement learning algorithms. |
+| [incubator-mxnet](https://github.com/apache/incubator-mxnet) | 18575 | Lightweight, Portable, Flexible Distributed/Mobile Deep Learning with Dynamic, Mutation-aware Dataflow Dep Scheduler; for Python, R, Julia, Scala, Go, Javascript and more |
+| [data-science-ipython-notebooks](https://github.com/donnemartin/data-science-ipython-notebooks) | 18294 | Data science Python notebooks: Deep learning (TensorFlow, Theano, Caffe, Keras), scikit-learn, Kaggle, big data (Spark, Hadoop MapReduce, HDFS), matplotlib, pandas, NumPy, SciPy, Python essentials, AWS, and various command lines. |
 | [neural-style](https://github.com/jcjohnson/neural-style) | 17454 | Torch implementation of neural style algorithm |
-| [CNTK](https://github.com/microsoft/CNTK) | 16746 | Microsoft Cognitive Toolkit (CNTK), an open source deep-learning toolkit |
-| [deepdream](https://github.com/google/deepdream) | 12416 | None |
-| [deeplearning4j](https://github.com/eclipse/deeplearning4j) | 11569 | Eclipse Deeplearning4j, ND4J, DataVec and more - deep learning & linear algebra for Java/Scala with GPUs + Spark |
-| [Paddle](https://github.com/PaddlePaddle/Paddle) | 11142 | PArallel Distributed Deep LEarning: Machine Learning Framework from Industrial Practice （『飞桨』核心框架，深度学习&机器学习高性能单机、分布式训练和跨平台部署） |
-| [Machine-Learning-Tutorials](https://github.com/ujjwalkarn/Machine-Learning-Tutorials) | 10153 | machine learning and deep learning tutorials, articles and other resources  |
-| [char-rnn](https://github.com/karpathy/char-rnn) | 10092 | Multi-layer Recurrent Neural Networks (LSTM, GRU, RNN) for character-level language models in Torch |
-| [convnetjs](https://github.com/karpathy/convnetjs) | 9937 | Deep Learning in Javascript. Train Convolutional Neural Networks (or ordinary ones) in your browser. |
-| [tflearn](https://github.com/tflearn/tflearn) | 9399 | Deep learning library featuring a higher-level API for TensorFlow. |
-| [Theano](https://github.com/Theano/Theano) | 9119 | Theano is a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. It can use GPUs and perform efficient symbolic differentiation. |
-| [RocAlphaGo](https://github.com/Rochester-NRT/RocAlphaGo) | 9025 | An independent, student-led replication of DeepMind's 2016 Nature publication, "Mastering the game of Go with deep neural networks and tree search" (Nature 529, 484-489, 28 Jan 2016), details of which can be found on their website https://deepmind.com/publications.html. |
-| [playground](https://github.com/tensorflow/playground) | 8986 | Play with neural networks! |
+| [CNTK](https://github.com/microsoft/CNTK) | 16744 | Microsoft Cognitive Toolkit (CNTK), an open source deep-learning toolkit |
+| [deepdream](https://github.com/google/deepdream) | 12417 | None |
+| [deeplearning4j](https://github.com/eclipse/deeplearning4j) | 11570 | Eclipse Deeplearning4j, ND4J, DataVec and more - deep learning & linear algebra for Java/Scala with GPUs + Spark |
+| [Paddle](https://github.com/PaddlePaddle/Paddle) | 11143 | PArallel Distributed Deep LEarning: Machine Learning Framework from Industrial Practice （『飞桨』核心框架，深度学习&机器学习高性能单机、分布式训练和跨平台部署） |
+| [Machine-Learning-Tutorials](https://github.com/ujjwalkarn/Machine-Learning-Tutorials) | 10161 | machine learning and deep learning tutorials, articles and other resources  |
+| [char-rnn](https://github.com/karpathy/char-rnn) | 10091 | Multi-layer Recurrent Neural Networks (LSTM, GRU, RNN) for character-level language models in Torch |
+| [convnetjs](https://github.com/karpathy/convnetjs) | 9939 | Deep Learning in Javascript. Train Convolutional Neural Networks (or ordinary ones) in your browser. |
+| [tflearn](https://github.com/tflearn/tflearn) | 9398 | Deep learning library featuring a higher-level API for TensorFlow. |
+| [Theano](https://github.com/Theano/Theano) | 9121 | Theano is a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. It can use GPUs and perform efficient symbolic differentiation. |
+| [RocAlphaGo](https://github.com/Rochester-NRT/RocAlphaGo) | 9024 | An independent, student-led replication of DeepMind's 2016 Nature publication, "Mastering the game of Go with deep neural networks and tree search" (Nature 529, 484-489, 28 Jan 2016), details of which can be found on their website https://deepmind.com/publications.html. |
+| [playground](https://github.com/tensorflow/playground) | 8988 | Play with neural networks! |
 | [tfjs-core](https://github.com/tensorflow/tfjs-core) | 8565 | WebGL-accelerated ML // linear algebra // automatic differentiation for JavaScript. |
-| [torch7](https://github.com/torch/torch7) | 8500 | http://torch.ch |
+| [torch7](https://github.com/torch/torch7) | 8499 | http://torch.ch |
 | [caffe2](https://github.com/facebookarchive/caffe2) | 8476 | Caffe2 is a lightweight, modular, and scalable deep learning framework. |
-| [tensorlayer](https://github.com/tensorlayer/tensorlayer) | 6024 | Deep Learning and Reinforcement Learning Library for Scientists 🔥 |
-| [TensorFlow-Tutorials](https://github.com/nlintz/TensorFlow-Tutorials) | 5858 | Simple tutorials using Google's TensorFlow Framework |
+| [tensorlayer](https://github.com/tensorlayer/tensorlayer) | 6026 | Deep Learning and Reinforcement Learning Library for Scientists 🔥 |
+| [TensorFlow-Tutorials](https://github.com/nlintz/TensorFlow-Tutorials) | 5860 | Simple tutorials using Google's TensorFlow Framework |
 | [Swift-AI](https://github.com/Swift-AI/Swift-AI) | 5702 | The Swift machine learning library. |
-| [tensorflow_tutorials](https://github.com/pkmital/tensorflow_tutorials) | 5461 | From the basics to slightly more interesting applications of Tensorflow |
-| [chainer](https://github.com/chainer/chainer) | 5334 | A flexible framework of neural networks for deep learning |
+| [tensorflow_tutorials](https://github.com/pkmital/tensorflow_tutorials) | 5463 | From the basics to slightly more interesting applications of Tensorflow |
+| [chainer](https://github.com/chainer/chainer) | 5335 | A flexible framework of neural networks for deep learning |
 | [neuraltalk](https://github.com/karpathy/neuraltalk) | 5102 | NeuralTalk is a Python+numpy project for learning Multimodal Recurrent Neural Networks that describe images with sentences. |
-| [tiny-dnn](https://github.com/tiny-dnn/tiny-dnn) | 5058 | header only, dependency-free deep learning framework in C++14 |
+| [tiny-dnn](https://github.com/tiny-dnn/tiny-dnn) | 5059 | header only, dependency-free deep learning framework in C++14 |
 | [TopDeepLearning](https://github.com/aymericdamien/TopDeepLearning) | 4829 | A list of popular github projects related to deep learning |
 | [keras-js](https://github.com/transcranial/keras-js) | 4720 | Run Keras models in the browser, with GPU support using WebGL |
 | [DeepLearningZeroToAll](https://github.com/hunkim/DeepLearningZeroToAll) | 3869 | TensorFlow Basic Tutorial Labs |
-| [neon](https://github.com/NervanaSystems/neon) | 3834 | Intel® Nervana™ reference deep learning framework committed to best performance on all hardware |
+| [neon](https://github.com/NervanaSystems/neon) | 3835 | Intel® Nervana™ reference deep learning framework committed to best performance on all hardware |
 | [dl-docker](https://github.com/floydhub/dl-docker) | 3748 | An all-in-one Docker image for deep learning. Contains all the popular DL frameworks (TensorFlow, Theano, Torch, Caffe, etc.) |
 | [Tensorflow-101](https://github.com/sjchoi86/Tensorflow-101) | 2447 | TensorFlow Tutorials |
 | [deepframeworks](https://github.com/zer0n/deepframeworks) | 2079 | Evaluation of Deep Learning Frameworks |
@@ -48,4 +48,4 @@ Please update list.txt (via pull requests)
 | [dlami](https://github.com/ritchieng/dlami) | 235 | A Deep Learning Amazon Web Service (AWS) AMI that is open, free and works. Run in less than 5 minutes. TensorFlow, Keras, PyTorch, Theano, MXNet, CNTK, Caffe and all dependencies. |
 | [PaintsChainer](https://github.com/taizan/PaintsChainer) | 85 | line drawing colorization using chainer |
 
-Last Automatic Update: Fri Apr 17 00:02:51 2020 (UTC)
+Last Automatic Update: Sat Apr 18 00:02:59 2020 (UTC)
