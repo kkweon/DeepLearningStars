@@ -11,6 +11,9 @@ Examples
 """
 import argparse
 import time
+import logging
+import sys
+
 from multiprocessing.pool import Pool
 from typing import Iterator, List
 
@@ -126,11 +129,11 @@ def grab_data(url: str) -> GitType:
                    'url',
                    'stars'])
     """
-    params = {"access_token": args.token}
+    headers = {"Authorization": "token " + args.token}
 
     try:
         print("Accessing to {}".format(url))
-        data_dict = requests.get(url, params=params).json()
+        data_dict = requests.get(url, headers=headers).json()
 
         return {
             "name": data_dict["name"],
@@ -148,6 +151,13 @@ def grab_data(url: str) -> GitType:
 
 def main() -> None:
     """Main function"""
+    if not args.token:
+        logging.error(
+            "GitHub Token is missing. Please pass your GitHub token key as a --token=xxxxxx"
+        )
+        sys.exit(1)
+        return
+
     url_list = get_url_list()
 
     pool = Pool(processes=args.workers)

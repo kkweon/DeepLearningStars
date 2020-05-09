@@ -28,4 +28,4 @@ push: ## push to github
 	git push origin master --force
 
 list: ## crawl a list
-	python list2md.multiprocess.py
+	pipenv run python list2md.multiprocess.py
