@@ -21,7 +21,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v1
     - name: Install pipenv
-      uses: dschep/install-pipenv-action@v1
+      run: pip install -U pipenv
     # Runs a single command using the runners shell
     - name: Run list2md.multiprocess.py
       run: pipenv install && pipenv run python list2md.multiprocess.py --token ${{ secrets.token }}
