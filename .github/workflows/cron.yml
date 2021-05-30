@@ -29,7 +29,7 @@ jobs:
       run: pip install -U pipenv
     # Runs a single command using the runners shell
     - name: Run list2md.multiprocess.py
-      run: pipenv install && pipenv run python list2md.multiprocess.py --token ${{ secrets.token }}
+      run: pipenv install && pipenv run python list2md.multiprocess.py --token ${{ secrets.GITHUB_TOKEN }}
     - name: Add & Commit
       run: |
         git config --global user.name 'GitHub Action'
