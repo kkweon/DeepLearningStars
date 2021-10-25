@@ -15,7 +15,7 @@ import logging
 import sys
 
 from multiprocessing.pool import Pool
-from typing import Iterator, List
+from typing import Any, Iterator, List
 
 import requests
 from mypy_extensions import TypedDict
@@ -81,7 +81,7 @@ def write_md(dict_list: List[GitType], filepath: str = "README.md") -> bool:
     # each data is a string (see `dict2md`)
     data_list = map(dict2md, dict_list)
 
-    with open(filepath, "w") as out:
+    with open(filepath, "w", encoding="utf-8") as out:
 
         out.write(head)
         out.write("\n".join(data_list))
@@ -104,7 +104,7 @@ def get_url_list(filepath: str = "list.txt") -> Iterator[str]:
         """Returns an API url"""
         return "https://api.github.com/repos/{}".format(url[19:].strip().strip("/"))
 
-    with open(filepath, "r") as file:
+    with open(filepath, "r", encoding="utf-8") as file:
         data = file.readlines()
 
     return map(preprocess_url, data)
@@ -133,7 +133,7 @@ def grab_data(url: str) -> GitType:
 
     try:
         print("Accessing to {}".format(url))
-        data_dict = requests.get(url, headers=headers).json()
+        data_dict: Any = requests.get(url, headers=headers).json()
 
         return {
             "name": data_dict["name"],
@@ -145,8 +145,10 @@ def grab_data(url: str) -> GitType:
             "stars": data_dict["stargazers_count"],
         }
 
-    except KeyError:
-        raise Exception("Failed to grab data for {}, got response = {}".format(url, data_dict))
+    except KeyError as key_error:
+        raise Exception(
+            "Failed to grab data for {}, got response = {}".format(url, data_dict)
+        ) from key_error
 
 
 def main() -> None:
