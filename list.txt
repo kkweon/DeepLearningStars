@@ -6,7 +6,6 @@ https://github.com/BVLC/caffe
 https://github.com/jcjohnson/neural-style
 https://github.com/google/deepdream
 https://github.com/fchollet/keras
-https://github.com/Rochester-NRT/RocAlphaGo
 https://github.com/karpathy/char-rnn
 https://github.com/hunkim/word-rnn-tensorflow
 https://github.com/karpathy/neuraltalk
