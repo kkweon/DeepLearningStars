@@ -146,7 +146,7 @@ def grab_data(url: str) -> GitType:
         }
 
     except KeyError:
-        raise Exception("{}".format(data_dict))
+        raise Exception("Failed to grab data for {}, got response = {}".format(url, data_dict))
 
 
 def main() -> None:
