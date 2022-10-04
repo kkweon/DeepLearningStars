@@ -4,24 +4,24 @@ Please update list.txt (via pull requests)
 
 |Project Name| Stars | Description |
 | ---------- |:-----:| ----------- |
-| [tensorflow](https://github.com/tensorflow/tensorflow) | 168126 | An Open Source Machine Learning Framework for Everyone |
-| [pytorch](https://github.com/pytorch/pytorch) | 59293 | Tensors and Dynamic neural networks in Python with strong GPU acceleration |
-| [keras](https://github.com/keras-team/keras) | 56304 | Deep Learning for humans |
-| [scikit-learn](https://github.com/scikit-learn/scikit-learn) | 51548 | scikit-learn: machine learning in Python |
-| [caffe](https://github.com/BVLC/caffe) | 32882 | Caffe: a fast open framework for deep learning. |
-| [gym](https://github.com/openai/gym) | 28706 | A toolkit for developing and comparing reinforcement learning algorithms. |
-| [data-science-ipython-notebooks](https://github.com/donnemartin/data-science-ipython-notebooks) | 23840 | Data science Python notebooks: Deep learning (TensorFlow, Theano, Caffe, Keras), scikit-learn, Kaggle, big data (Spark, Hadoop MapReduce, HDFS), matplotlib, pandas, NumPy, SciPy, Python essentials, AWS, and various command lines. |
+| [tensorflow](https://github.com/tensorflow/tensorflow) | 168146 | An Open Source Machine Learning Framework for Everyone |
+| [pytorch](https://github.com/pytorch/pytorch) | 59314 | Tensors and Dynamic neural networks in Python with strong GPU acceleration |
+| [keras](https://github.com/keras-team/keras) | 56310 | Deep Learning for humans |
+| [scikit-learn](https://github.com/scikit-learn/scikit-learn) | 51553 | scikit-learn: machine learning in Python |
+| [caffe](https://github.com/BVLC/caffe) | 32886 | Caffe: a fast open framework for deep learning. |
+| [gym](https://github.com/openai/gym) | 28711 | A toolkit for developing and comparing reinforcement learning algorithms. |
+| [data-science-ipython-notebooks](https://github.com/donnemartin/data-science-ipython-notebooks) | 23844 | Data science Python notebooks: Deep learning (TensorFlow, Theano, Caffe, Keras), scikit-learn, Kaggle, big data (Spark, Hadoop MapReduce, HDFS), matplotlib, pandas, NumPy, SciPy, Python essentials, AWS, and various command lines. |
 | [incubator-mxnet](https://github.com/apache/incubator-mxnet) | 20090 | Lightweight, Portable, Flexible Distributed/Mobile Deep Learning with Dynamic, Mutation-aware Dataflow Dep Scheduler; for Python, R, Julia, Scala, Go, Javascript and more |
-| [Paddle](https://github.com/PaddlePaddle/Paddle) | 18953 | PArallel Distributed Deep LEarning: Machine Learning Framework from Industrial Practice （『飞桨』核心框架，深度学习&机器学习高性能单机、分布式训练和跨平台部署） |
+| [Paddle](https://github.com/PaddlePaddle/Paddle) | 18960 | PArallel Distributed Deep LEarning: Machine Learning Framework from Industrial Practice （『飞桨』核心框架，深度学习&机器学习高性能单机、分布式训练和跨平台部署） |
 | [neural-style](https://github.com/jcjohnson/neural-style) | 18268 | Torch implementation of neural style algorithm |
 | [CNTK](https://github.com/microsoft/CNTK) | 17232 | Microsoft Cognitive Toolkit (CNTK), an open source deep-learning toolkit |
-| [deepdream](https://github.com/google/deepdream) | 13103 | None |
-| [deeplearning4j](https://github.com/deeplearning4j/deeplearning4j) | 12630 | Suite of tools for deploying and training deep learning models using the JVM. Highlights include model import for keras, tensorflow, and onnx/pytorch, a modular and tiny c++ library for running math code and a java based math library on top of the core c++ library. Also includes samediff: a pytorch/tensorflow like library for running deep learning using automatic differentiation. |
-| [Machine-Learning-Tutorials](https://github.com/ujjwalkarn/Machine-Learning-Tutorials) | 12369 | machine learning and deep learning tutorials, articles and other resources  |
-| [char-rnn](https://github.com/karpathy/char-rnn) | 10943 | Multi-layer Recurrent Neural Networks (LSTM, GRU, RNN) for character-level language models in Torch |
-| [playground](https://github.com/tensorflow/playground) | 10568 | Play with neural networks! |
-| [convnetjs](https://github.com/karpathy/convnetjs) | 10389 | Deep Learning in Javascript. Train Convolutional Neural Networks (or ordinary ones) in your browser. |
-| [Theano](https://github.com/Theano/Theano) | 9623 | Theano was a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. It is being continued as aesara: www.github.com/pymc-devs/aesara |
+| [deepdream](https://github.com/google/deepdream) | 13104 | None |
+| [deeplearning4j](https://github.com/deeplearning4j/deeplearning4j) | 12631 | Suite of tools for deploying and training deep learning models using the JVM. Highlights include model import for keras, tensorflow, and onnx/pytorch, a modular and tiny c++ library for running math code and a java based math library on top of the core c++ library. Also includes samediff: a pytorch/tensorflow like library for running deep learning using automatic differentiation. |
+| [Machine-Learning-Tutorials](https://github.com/ujjwalkarn/Machine-Learning-Tutorials) | 12371 | machine learning and deep learning tutorials, articles and other resources  |
+| [char-rnn](https://github.com/karpathy/char-rnn) | 10945 | Multi-layer Recurrent Neural Networks (LSTM, GRU, RNN) for character-level language models in Torch |
+| [playground](https://github.com/tensorflow/playground) | 10572 | Play with neural networks! |
+| [convnetjs](https://github.com/karpathy/convnetjs) | 10393 | Deep Learning in Javascript. Train Convolutional Neural Networks (or ordinary ones) in your browser. |
+| [Theano](https://github.com/Theano/Theano) | 9624 | Theano was a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. It is being continued as aesara: www.github.com/pymc-devs/aesara |
 | [tflearn](https://github.com/tflearn/tflearn) | 9581 | Deep learning library featuring a higher-level API for TensorFlow. |
 | [torch7](https://github.com/torch/torch7) | 8741 | http://torch.ch |
 | [tfjs-core](https://github.com/tensorflow/tfjs-core) | 8507 | WebGL-accelerated ML // linear algebra // automatic differentiation for JavaScript. |
@@ -39,12 +39,12 @@ Please update list.txt (via pull requests)
 | [dl-docker](https://github.com/floydhub/dl-docker) | 3877 | An all-in-one Docker image for deep learning. Contains all the popular DL frameworks (TensorFlow, Theano, Torch, Caffe, etc.) |
 | [neon](https://github.com/NervanaSystems/neon) | 3860 | Intel® Nervana™ reference deep learning framework committed to best performance on all hardware |
 | [Tensorflow-101](https://github.com/sjchoi86/Tensorflow-101) | 2582 | TensorFlow Tutorials |
-| [DeepRL-Agents](https://github.com/awjuliani/DeepRL-Agents) | 2174 | A set of Deep Reinforcement Learning Agents implemented in Tensorflow. |
+| [DeepRL-Agents](https://github.com/awjuliani/DeepRL-Agents) | 2175 | A set of Deep Reinforcement Learning Agents implemented in Tensorflow. |
 | [deepframeworks](https://github.com/zer0n/deepframeworks) | 2054 | Evaluation of Deep Learning Frameworks |
 | [word-rnn-tensorflow](https://github.com/hunkim/word-rnn-tensorflow) | 1302 | Multi-layer Recurrent Neural Networks (LSTM, RNN) for word-level language models in Python using TensorFlow. |
-| [tensorflow-deepq](https://github.com/siemanko/tensorflow-deepq) | 1170 | A deep Q learning demonstration using Google Tensorflow |
+| [tensorflow-deepq](https://github.com/siemanko/tensorflow-deepq) | 1171 | A deep Q learning demonstration using Google Tensorflow |
 | [DeepLearningStars](https://github.com/hunkim/DeepLearningStars) | 381 | Top Deep Learning Projects based on their Stars! |
 | [dlami](https://github.com/ritchieng/dlami) | 236 | A Deep Learning Amazon Web Service (AWS) AMI that is open, free and works. Run in less than 5 minutes. TensorFlow, Keras, PyTorch, Theano, MXNet, CNTK, Caffe and all dependencies. |
 | [PaintsChainer](https://github.com/taizan/PaintsChainer) | 112 | line drawing colorization using chainer |
 
-Last Automatic Update: Mon Oct  3 00:06:49 2022 (UTC)
+Last Automatic Update: Tue Oct  4 00:08:26 2022 (UTC)
