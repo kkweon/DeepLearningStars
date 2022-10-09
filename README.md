@@ -4,22 +4,22 @@ Please update list.txt (via pull requests)
 
 |Project Name| Stars | Description |
 | ---------- |:-----:| ----------- |
-| [tensorflow](https://github.com/tensorflow/tensorflow) | 168237 | An Open Source Machine Learning Framework for Everyone |
-| [pytorch](https://github.com/pytorch/pytorch) | 59409 | Tensors and Dynamic neural networks in Python with strong GPU acceleration |
-| [keras](https://github.com/keras-team/keras) | 56337 | Deep Learning for humans |
-| [scikit-learn](https://github.com/scikit-learn/scikit-learn) | 51587 | scikit-learn: machine learning in Python |
-| [caffe](https://github.com/BVLC/caffe) | 32900 | Caffe: a fast open framework for deep learning. |
-| [gym](https://github.com/openai/gym) | 28745 | A toolkit for developing and comparing reinforcement learning algorithms. |
-| [data-science-ipython-notebooks](https://github.com/donnemartin/data-science-ipython-notebooks) | 23868 | Data science Python notebooks: Deep learning (TensorFlow, Theano, Caffe, Keras), scikit-learn, Kaggle, big data (Spark, Hadoop MapReduce, HDFS), matplotlib, pandas, NumPy, SciPy, Python essentials, AWS, and various command lines. |
-| [incubator-mxnet](https://github.com/apache/incubator-mxnet) | 20094 | Lightweight, Portable, Flexible Distributed/Mobile Deep Learning with Dynamic, Mutation-aware Dataflow Dep Scheduler; for Python, R, Julia, Scala, Go, Javascript and more |
-| [Paddle](https://github.com/PaddlePaddle/Paddle) | 18968 | PArallel Distributed Deep LEarning: Machine Learning Framework from Industrial Practice （『飞桨』核心框架，深度学习&机器学习高性能单机、分布式训练和跨平台部署） |
-| [neural-style](https://github.com/jcjohnson/neural-style) | 18266 | Torch implementation of neural style algorithm |
-| [CNTK](https://github.com/microsoft/CNTK) | 17233 | Microsoft Cognitive Toolkit (CNTK), an open source deep-learning toolkit |
+| [tensorflow](https://github.com/tensorflow/tensorflow) | 168250 | An Open Source Machine Learning Framework for Everyone |
+| [pytorch](https://github.com/pytorch/pytorch) | 59429 | Tensors and Dynamic neural networks in Python with strong GPU acceleration |
+| [keras](https://github.com/keras-team/keras) | 56343 | Deep Learning for humans |
+| [scikit-learn](https://github.com/scikit-learn/scikit-learn) | 51601 | scikit-learn: machine learning in Python |
+| [caffe](https://github.com/BVLC/caffe) | 32902 | Caffe: a fast open framework for deep learning. |
+| [gym](https://github.com/openai/gym) | 28756 | A toolkit for developing and comparing reinforcement learning algorithms. |
+| [data-science-ipython-notebooks](https://github.com/donnemartin/data-science-ipython-notebooks) | 23874 | Data science Python notebooks: Deep learning (TensorFlow, Theano, Caffe, Keras), scikit-learn, Kaggle, big data (Spark, Hadoop MapReduce, HDFS), matplotlib, pandas, NumPy, SciPy, Python essentials, AWS, and various command lines. |
+| [incubator-mxnet](https://github.com/apache/incubator-mxnet) | 20096 | Lightweight, Portable, Flexible Distributed/Mobile Deep Learning with Dynamic, Mutation-aware Dataflow Dep Scheduler; for Python, R, Julia, Scala, Go, Javascript and more |
+| [Paddle](https://github.com/PaddlePaddle/Paddle) | 18972 | PArallel Distributed Deep LEarning: Machine Learning Framework from Industrial Practice （『飞桨』核心框架，深度学习&机器学习高性能单机、分布式训练和跨平台部署） |
+| [neural-style](https://github.com/jcjohnson/neural-style) | 18267 | Torch implementation of neural style algorithm |
+| [CNTK](https://github.com/microsoft/CNTK) | 17234 | Microsoft Cognitive Toolkit (CNTK), an open source deep-learning toolkit |
 | [deepdream](https://github.com/google/deepdream) | 13103 | None |
-| [deeplearning4j](https://github.com/deeplearning4j/deeplearning4j) | 12634 | Suite of tools for deploying and training deep learning models using the JVM. Highlights include model import for keras, tensorflow, and onnx/pytorch, a modular and tiny c++ library for running math code and a java based math library on top of the core c++ library. Also includes samediff: a pytorch/tensorflow like library for running deep learning using automatic differentiation. |
-| [Machine-Learning-Tutorials](https://github.com/ujjwalkarn/Machine-Learning-Tutorials) | 12380 | machine learning and deep learning tutorials, articles and other resources  |
-| [char-rnn](https://github.com/karpathy/char-rnn) | 10948 | Multi-layer Recurrent Neural Networks (LSTM, GRU, RNN) for character-level language models in Torch |
-| [playground](https://github.com/tensorflow/playground) | 10579 | Play with neural networks! |
+| [deeplearning4j](https://github.com/deeplearning4j/deeplearning4j) | 12635 | Suite of tools for deploying and training deep learning models using the JVM. Highlights include model import for keras, tensorflow, and onnx/pytorch, a modular and tiny c++ library for running math code and a java based math library on top of the core c++ library. Also includes samediff: a pytorch/tensorflow like library for running deep learning using automatic differentiation. |
+| [Machine-Learning-Tutorials](https://github.com/ujjwalkarn/Machine-Learning-Tutorials) | 12381 | machine learning and deep learning tutorials, articles and other resources  |
+| [char-rnn](https://github.com/karpathy/char-rnn) | 10949 | Multi-layer Recurrent Neural Networks (LSTM, GRU, RNN) for character-level language models in Torch |
+| [playground](https://github.com/tensorflow/playground) | 10581 | Play with neural networks! |
 | [convnetjs](https://github.com/karpathy/convnetjs) | 10396 | Deep Learning in Javascript. Train Convolutional Neural Networks (or ordinary ones) in your browser. |
 | [Theano](https://github.com/Theano/Theano) | 9623 | Theano was a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. It is being continued as aesara: www.github.com/pymc-devs/aesara |
 | [tflearn](https://github.com/tflearn/tflearn) | 9583 | Deep learning library featuring a higher-level API for TensorFlow. |
@@ -47,4 +47,4 @@ Please update list.txt (via pull requests)
 | [dlami](https://github.com/ritchieng/dlami) | 236 | A Deep Learning Amazon Web Service (AWS) AMI that is open, free and works. Run in less than 5 minutes. TensorFlow, Keras, PyTorch, Theano, MXNet, CNTK, Caffe and all dependencies. |
 | [PaintsChainer](https://github.com/taizan/PaintsChainer) | 112 | line drawing colorization using chainer |
 
-Last Automatic Update: Sat Oct  8 00:07:41 2022 (UTC)
+Last Automatic Update: Sun Oct  9 00:06:27 2022 (UTC)
