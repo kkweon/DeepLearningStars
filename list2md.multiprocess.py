@@ -1,6 +1,6 @@
 # pylint: disable=C0103
 """
-Multiprocess version of list2md.py
+Multiprocessor version of list2md.py
 
 
 Examples
@@ -15,10 +15,12 @@ import logging
 import sys
 
 from multiprocessing.pool import Pool
-from typing import Any, Iterator, List
+from typing import Any, Iterator, List, Optional
 
 import requests
 from mypy_extensions import TypedDict
+
+logger = logging.getLogger(__name__)
 
 parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument("--token", help="GitHub API Token to query repo stars.")
@@ -40,7 +42,7 @@ GitType = TypedDict(
 )
 
 
-def write_md(dict_list: List[GitType], filepath: str = "README.md") -> bool:
+def write_md(dict_list: List[Optional[GitType]], filepath: str = "README.md") -> bool:
     """Given a list of dict, write a markdown file
 
     Parameters
@@ -89,11 +91,11 @@ def write_md(dict_list: List[GitType], filepath: str = "README.md") -> bool:
 
         return True
 
-    return False
-
 
 def dict2md(dict_: GitType) -> str:
     """Convert a dictionary to a markdown format"""
+    if not dict_:
+        return ""
     return "| [{name}]({url}) | {stars} | {description} |".format(**dict_)
 
 
@@ -110,7 +112,7 @@ def get_url_list(filepath: str = "list.txt") -> Iterator[str]:
     return map(preprocess_url, data)
 
 
-def grab_data(url: str) -> GitType:
+def grab_data(url: str) -> Optional[GitType]:
     """Go to the URL and grab a data
 
     Parameters
@@ -145,10 +147,13 @@ def grab_data(url: str) -> GitType:
             "stars": data_dict["stargazers_count"],
         }
 
-    except KeyError as key_error:
-        raise Exception(
-            "Failed to grab data for {}, got response = {}".format(url, data_dict)
-        ) from key_error
+    except KeyError:
+        logger.warning(
+            "Failed to grab data for %s where response is %s", url, data_dict
+        )
+
+    except Exception as e:
+        logger.error("Failed to grab data for %s with error %s", url, e)
 
 
 def main() -> None:
